@@ -236,6 +236,12 @@ subprojects {
 						password findProperty('MILESTONE_REPO_PASSWORD')
 					}
 				}
+				if (project.hasProperty("deploymentRepository")) {
+					maven {
+						name = 'Deployment'
+						url = project.property("deploymentRepository")
+					}
+				}
 			}
 		}
 
