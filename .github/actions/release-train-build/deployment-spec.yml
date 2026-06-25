@@ -1,0 +1,14 @@
+artifactory:
+  artifacts:
+    - pattern: "/**/spring-*.zip"
+      properties:
+        zip.deployed: "false"
+    - pattern: "/**/spring-*-docs.zip"
+      properties:
+        zip.type: "docs"
+    - pattern: "/**/spring-*-schema.zip"
+      properties:
+        zip.type: "schema"
+maven-central:
+  excludes:
+    - "org/springframework/abc/spring-abc-docs/**"
